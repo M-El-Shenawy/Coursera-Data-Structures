@@ -1,3 +1,4 @@
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
@@ -47,7 +48,7 @@ class check_brackets {
 				} else {
 					Bracket top = opening_brackets_stack.pop();
 					if (!top.Match(next)) {
-						System.out.println(top.position + 1);
+						System.out.println(position + 1);
 						return;
 					}
 				}
