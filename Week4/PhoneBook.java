@@ -8,7 +8,6 @@ public class PhoneBook {
 
 	private FastScanner in = new FastScanner();
 	// Keep list of all existing (i.e. not deleted yet) contacts.
-	// private List<Contact> contacts = new ArrayList<>();
 	private HashMap<Integer, String> contacts = new HashMap<Integer, String>();
 
 	public static void main(String[] args) {
