@@ -18,7 +18,7 @@ class QueryProcessor:
     def __init__(self, bucket_count):
         self.bucket_count = bucket_count
         # store all strings in one list
-        self.elems = [[]] * self.bucket_count
+        self.elems = [[] for _ in range(bucket_count)]
 
     def _hash_func(self, s):
         ans = 0
@@ -38,7 +38,7 @@ class QueryProcessor:
     def process_query(self, query):
         if query.type == "check":
             # use reverse order, because we append strings to the end
-            self.write_chain(self.write_chain(self.elems[query.ind]))
+            print(" ".join(self.elems[query.ind]))
 
         else:
             ind = self._hash_func(query.s)
